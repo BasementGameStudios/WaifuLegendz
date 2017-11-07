@@ -36,7 +36,6 @@ public class UserInterfaceController : MonoBehaviour {
 
     public void ToggleChatBox()
     {
-        return; 
 
         if (toggle)
         {
