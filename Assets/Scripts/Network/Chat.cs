@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
@@ -31,10 +32,9 @@ public class Chat : NetworkBehaviour {
         {
             CmdGetPlayerProfile(nameInput.text);
             UserInterfaceController.TransitionToGameUI();
-            GameObject.Find("_GameManager").GetComponent<UserInterfaceController>().ToggleChatBox();
+            //GameObject.Find("_GameManager").GetComponent<UserInterfaceController>().ToggleChatBox();
         }
     }
-
 
     [Command]
     void CmdGetPlayerProfile(string name)
@@ -55,12 +55,16 @@ public class Chat : NetworkBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            string _message = inputField.text;
-            if (_message.Length == 0) return;
-            inputField.text = "";
-            CmdSendChatMessage( pName + ": " + _message);
+            inputField.enabled = true;  
+            inputField.ActivateInputField();
+            if (inputField.text.Length > 0)
+            {
+                string _message = inputField.text;
+                CmdSendChatMessage(pName + ": " + _message);
+                inputField.text = "";
+                inputField.enabled = false;
+            }
         }
-
     }
 
     [Command]
