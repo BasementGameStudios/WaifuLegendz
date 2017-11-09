@@ -34,6 +34,8 @@ public class Chat : NetworkBehaviour {
             UserInterfaceController.TransitionToGameUI();
             //GameObject.Find("_GameManager").GetComponent<UserInterfaceController>().ToggleChatBox();
         }
+
+      
     }
 
     [Command]

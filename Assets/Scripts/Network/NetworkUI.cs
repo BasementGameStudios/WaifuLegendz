@@ -22,8 +22,9 @@ public class NetworkUI : MonoBehaviour
     void Awake()
     {
         manager = GetComponent<NetworkManager>();
-        lobbyCamera = GameObject.Find("LobbyCamera").GetComponent<Camera>();
+        //lobbyCamera = GameObject.Find("LobbyCamera").GetComponent<Camera>();
     }
+
 
     void OnGUI()
     {
@@ -48,7 +49,7 @@ public class NetworkUI : MonoBehaviour
                     {
                         if (NameIsValid())
                         {
-                            lobbyCamera.gameObject.SetActive(false);
+                            //lobbyCamera.gameObject.SetActive(false);
                             manager.StartHost();
                         }
                         else UserInterfaceController.nameInput.placeholder.GetComponent<Text>().text = "Name cannot be blank";
@@ -60,7 +61,7 @@ public class NetworkUI : MonoBehaviour
                 {
                     if (NameIsValid())
                     {
-                        lobbyCamera.gameObject.SetActive(false);
+                        //lobbyCamera.gameObject.SetActive(false);
                         manager.StartClient();
                     }
                     else UserInterfaceController.nameInput.placeholder.GetComponent<Text>().text = "Name cannot be blank";
@@ -126,7 +127,7 @@ public class NetworkUI : MonoBehaviour
             {
                 manager.StopHost();
                 UserInterfaceController.TransitionToLobbyUI();
-                lobbyCamera.gameObject.SetActive(true);
+                //lobbyCamera.gameObject.SetActive(true);
             }
             ypos += spacing;
         }

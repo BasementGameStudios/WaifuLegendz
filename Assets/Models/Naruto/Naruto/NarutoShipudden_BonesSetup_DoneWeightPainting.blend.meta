@@ -1,0 +1,772 @@
+fileFormatVersion: 2
+guid: 9a379b9de3417d44d9c2fd82354d36f2
+timeCreated: 1490569336
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Abs
+    100002: ankle_l
+    100004: ankle_r
+    100006: Armature
+    100008: Chest
+    100010: feet_l
+    100012: feet_r
+    100014: hand_l
+    100016: hand_r
+    100018: Head
+    100020: legControl_l
+    100022: legControl_r
+    100024: lowerarm_l
+    100026: lowerarm_r
+    100028: lowerleg_l
+    100030: lowerleg_r
+    100032: Naruto_001_Naruto
+    100034: //RootNode
+    100036: Neck
+    100038: upperarm_l
+    100040: upperarm_r
+    100042: upperleg_l
+    100044: upperleg_r
+    400000: Abs
+    400002: ankle_l
+    400004: ankle_r
+    400006: Armature
+    400008: Chest
+    400010: feet_l
+    400012: feet_r
+    400014: hand_l
+    400016: hand_r
+    400018: Head
+    400020: legControl_l
+    400022: legControl_r
+    400024: lowerarm_l
+    400026: lowerarm_r
+    400028: lowerleg_l
+    400030: lowerleg_r
+    400032: Naruto_001_Naruto
+    400034: //RootNode
+    400036: Neck
+    400038: upperarm_l
+    400040: upperarm_r
+    400042: upperleg_l
+    400044: upperleg_r
+    4300000: Naruto_001_Naruto
+    7400000: Default Take
+    7400002: Naruto_Idle
+    7400004: Naruto_Run
+    7400006: Rasengan
+    7400008: T-pose
+    9500000: //RootNode
+    13700000: Naruto_001_Naruto
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nrt_eye_png_001_nrt_eye_png__nrt_eye_png
+    second: {fileID: 2100000, guid: 1d0e1368e0448814793b3845ce79e5e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nrt_tex01_png_nrt_tex01_png__nrt_tex01_png
+    second: {fileID: 2100000, guid: f7a70d57f25c75b48bf1d056dc688a53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nrt_tex02_png_nrt_tex02_png__nrt_tex02_png
+    second: {fileID: 2100000, guid: 7fb6072b68bcde94db4833e762e141cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nrta_tex2_png_nrt_tex02_png__nrt_tex02_png_001
+    second: {fileID: 2100000, guid: 7fb6072b68bcde94db4833e762e141cf, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: <Root Transform>
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: -1
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Abs
+        weight: 1
+      - path: Armature/Abs/Chest
+        weight: 1
+      - path: Armature/Abs/Chest/Neck
+        weight: 1
+      - path: Armature/Abs/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l/lowerarm_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l/lowerarm_l/hand_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r/lowerarm_r
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: Armature/Abs/upperleg_l
+        weight: 1
+      - path: Armature/Abs/upperleg_l/lowerleg_l
+        weight: 1
+      - path: Armature/Abs/upperleg_l/lowerleg_l/ankle_l
+        weight: 1
+      - path: Armature/Abs/upperleg_r
+        weight: 1
+      - path: Armature/Abs/upperleg_r/lowerleg_r
+        weight: 1
+      - path: Armature/Abs/upperleg_r/lowerleg_r/ankle_r
+        weight: 1
+      - path: Armature/legControl_l
+        weight: 1
+      - path: Armature/legControl_l/feet_l
+        weight: 1
+      - path: Armature/legControl_r
+        weight: 1
+      - path: Armature/legControl_r/feet_r
+        weight: 1
+      - path: Naruto_001_Naruto
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Naruto_Idle
+      takeName: Naruto_Idle
+      firstFrame: -1
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Abs
+        weight: 1
+      - path: Armature/Abs/Chest
+        weight: 1
+      - path: Armature/Abs/Chest/Neck
+        weight: 1
+      - path: Armature/Abs/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l/lowerarm_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l/lowerarm_l/hand_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r/lowerarm_r
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: Armature/Abs/upperleg_l
+        weight: 1
+      - path: Armature/Abs/upperleg_l/lowerleg_l
+        weight: 1
+      - path: Armature/Abs/upperleg_l/lowerleg_l/ankle_l
+        weight: 1
+      - path: Armature/Abs/upperleg_r
+        weight: 1
+      - path: Armature/Abs/upperleg_r/lowerleg_r
+        weight: 1
+      - path: Armature/Abs/upperleg_r/lowerleg_r/ankle_r
+        weight: 1
+      - path: Armature/legControl_l
+        weight: 1
+      - path: Armature/legControl_l/feet_l
+        weight: 1
+      - path: Armature/legControl_r
+        weight: 1
+      - path: Armature/legControl_r/feet_r
+        weight: 1
+      - path: Naruto_001_Naruto
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Naruto_Run
+      takeName: Naruto_Run
+      firstFrame: -1
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Abs
+        weight: 1
+      - path: Armature/Abs/Chest
+        weight: 1
+      - path: Armature/Abs/Chest/Neck
+        weight: 1
+      - path: Armature/Abs/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l/lowerarm_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l/lowerarm_l/hand_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r/lowerarm_r
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: Armature/Abs/upperleg_l
+        weight: 1
+      - path: Armature/Abs/upperleg_l/lowerleg_l
+        weight: 1
+      - path: Armature/Abs/upperleg_l/lowerleg_l/ankle_l
+        weight: 1
+      - path: Armature/Abs/upperleg_r
+        weight: 1
+      - path: Armature/Abs/upperleg_r/lowerleg_r
+        weight: 1
+      - path: Armature/Abs/upperleg_r/lowerleg_r/ankle_r
+        weight: 1
+      - path: Armature/legControl_l
+        weight: 1
+      - path: Armature/legControl_l/feet_l
+        weight: 1
+      - path: Armature/legControl_r
+        weight: 1
+      - path: Armature/legControl_r/feet_r
+        weight: 1
+      - path: Naruto_001_Naruto
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Rasengan
+      takeName: Rasengan
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Abs
+        weight: 1
+      - path: Armature/Abs/Chest
+        weight: 1
+      - path: Armature/Abs/Chest/Neck
+        weight: 1
+      - path: Armature/Abs/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l/lowerarm_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l/lowerarm_l/hand_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r/lowerarm_r
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: Armature/Abs/upperleg_l
+        weight: 1
+      - path: Armature/Abs/upperleg_l/lowerleg_l
+        weight: 1
+      - path: Armature/Abs/upperleg_l/lowerleg_l/ankle_l
+        weight: 1
+      - path: Armature/Abs/upperleg_r
+        weight: 1
+      - path: Armature/Abs/upperleg_r/lowerleg_r
+        weight: 1
+      - path: Armature/Abs/upperleg_r/lowerleg_r/ankle_r
+        weight: 1
+      - path: Armature/legControl_l
+        weight: 1
+      - path: Armature/legControl_l/feet_l
+        weight: 1
+      - path: Armature/legControl_r
+        weight: 1
+      - path: Armature/legControl_r/feet_r
+        weight: 1
+      - path: Naruto_001_Naruto
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: T-pose
+      takeName: T-pose
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Abs
+        weight: 1
+      - path: Armature/Abs/Chest
+        weight: 1
+      - path: Armature/Abs/Chest/Neck
+        weight: 1
+      - path: Armature/Abs/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l/lowerarm_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_l/lowerarm_l/hand_l
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r/lowerarm_r
+        weight: 1
+      - path: Armature/Abs/Chest/upperarm_r/lowerarm_r/hand_r
+        weight: 1
+      - path: Armature/Abs/upperleg_l
+        weight: 1
+      - path: Armature/Abs/upperleg_l/lowerleg_l
+        weight: 1
+      - path: Armature/Abs/upperleg_l/lowerleg_l/ankle_l
+        weight: 1
+      - path: Armature/Abs/upperleg_r
+        weight: 1
+      - path: Armature/Abs/upperleg_r/lowerleg_r
+        weight: 1
+      - path: Armature/Abs/upperleg_r/lowerleg_r/ankle_r
+        weight: 1
+      - path: Armature/legControl_l
+        weight: 1
+      - path: Armature/legControl_l/feet_l
+        weight: 1
+      - path: Armature/legControl_r
+        weight: 1
+      - path: Armature/legControl_r/feet_r
+        weight: 1
+      - path: Naruto_001_Naruto
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Armature
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upperleg_l
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upperleg_r
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lowerleg_l
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lowerleg_r
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ankle_l
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: ankle_r
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Chest
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upperarm_l
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upperarm_r
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lowerarm_l
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lowerarm_r
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hand_l
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hand_r
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: NarutoShipudden_BonesSetup_DoneWeightPainting(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: NarutoShipudden_BonesSetup_DoneWeightPainting(Clone)
+      position: {x: 0.010309219, y: -0.1896539, z: -1.3690716}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: legControl_l
+      parentName: Armature
+      position: {x: -0.100861065, y: -1.3156657, z: -0.0022887113}
+      rotation: {x: 0.7071066, y: 0.7071065, z: -0.0006296617, w: 0.0006141517}
+      scale: {x: 1, y: 1, z: 1.0000015}
+    - name: feet_l
+      parentName: legControl_l
+      position: {x: -0.020359064, y: 0.0026612435, z: -0.067938745}
+      rotation: {x: 0.993227, y: -0.0000012977875, z: -0.116190225, w: 0.000011327452}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: legControl_r
+      parentName: Armature
+      position: {x: 0.08024263, y: -1.3156657, z: -0.0022887113}
+      rotation: {x: 0.7071066, y: 0.7071065, z: -0.0006296617, w: 0.0006141517}
+      scale: {x: 1, y: 1, z: 1.0000015}
+    - name: feet_r
+      parentName: legControl_r
+      position: {x: -0.020358931, y: -0.0026642154, z: -0.06793867}
+      rotation: {x: 0.993227, y: -0.000001285539, z: -0.116190225, w: 0.000011459331}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: Abs
+      parentName: Armature
+      position: {x: -0.014450007, y: -1.370797, z: 0.9136626}
+      rotation: {x: -0.31341553, y: 0.61783993, z: 0.32624236, w: 0.64312553}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Chest
+      parentName: Abs
+      position: {x: -0.21333912, y: -0.000000013374638, z: 0.00000006146729}
+      rotation: {x: -0.310586, y: 0.010531003, z: 0.009015772, w: 0.9504442}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: Neck
+      parentName: Chest
+      position: {x: -0.28852126, y: 0.000000020514335, z: 0.00000006807352}
+      rotation: {x: 0.9980698, y: -0.000000044929013, z: -0.062101297, w: -0.00000066472813}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head
+      parentName: Neck
+      position: {x: -0.055446953, y: 0.000000004179483, z: 0.00000013878488}
+      rotation: {x: 0.9970103, y: -0.000000058887107, z: -0.07726876, w: 0.00000039132388}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: upperarm_l
+      parentName: Chest
+      position: {x: -0.22898155, y: 0.122127324, z: 0.028050048}
+      rotation: {x: 0.49415544, y: -0.49683064, z: -0.5057778, w: 0.5031487}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: lowerarm_l
+      parentName: upperarm_l
+      position: {x: -0.26498467, y: -0.00000006992466, z: 0.000000038762465}
+      rotation: {x: 0.0000000134774645, y: 0.009564107, z: 0.00000022361706, w: 0.9999543}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: hand_l
+      parentName: lowerarm_l
+      position: {x: -0.21668528, y: 0.00000016716412, z: -0.000000078098935}
+      rotation: {x: 0.0012730889, y: -0.029224427, z: 0.082109064, w: 0.996194}
+      scale: {x: 1.0000004, y: 1, z: 1.0000001}
+    - name: upperarm_r
+      parentName: Chest
+      position: {x: -0.22898157, y: -0.14051248, z: 0.028049758}
+      rotation: {x: 0.50310725, y: 0.505735, z: 0.49687412, w: 0.49419767}
+      scale: {x: 1, y: 1, z: 1}
+    - name: lowerarm_r
+      parentName: upperarm_r
+      position: {x: -0.26498464, y: -0.000000025040393, z: 0.00000002948218}
+      rotation: {x: 0.00008483171, y: -0.009564116, z: -0.0000005889749, w: 0.9999543}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: hand_r
+      parentName: lowerarm_r
+      position: {x: -0.21668524, y: 0.0000001319838, z: 0.000000115847826}
+      rotation: {x: 0.961397, y: 0.086888894, z: -0.0068024592, w: 0.26099804}
+      scale: {x: 0.9999997, y: 0.99999994, z: 1}
+    - name: upperleg_l
+      parentName: Abs
+      position: {x: 0.055910967, y: 0.06690997, z: -0.052663237}
+      rotation: {x: 0.019055892, y: 0.31065384, z: 0.95031166, w: -0.006229449}
+      scale: {x: 0.99999976, y: 0.9999999, z: 0.999941}
+    - name: lowerleg_l
+      parentName: upperleg_l
+      position: {x: -0.34810263, y: 0.000000030770096, z: -0.000000002974261}
+      rotation: {x: -0.000000045851532, y: 0.04056658, z: 0.00000001863973, w: 0.99917686}
+      scale: {x: 1, y: 1, z: 0.99999964}
+    - name: ankle_l
+      parentName: lowerleg_l
+      position: {x: -0.24210286, y: 0.000000008807413, z: -0.000000016113678}
+      rotation: {x: 0.0000002814744, y: 0.00020303948, z: -2.3582017e-10, w: 1}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: upperleg_r
+      parentName: Abs
+      position: {x: 0.060073297, y: -0.07492736, z: 0.0510808}
+      rotation: {x: 0.019055903, y: 0.31065392, z: 0.95031166, w: -0.006229455}
+      scale: {x: 0.9999997, y: 0.9999999, z: 0.9999436}
+    - name: lowerleg_r
+      parentName: upperleg_r
+      position: {x: -0.34810245, y: 0.000000027556943, z: -0.00000003805752}
+      rotation: {x: -0.00000013720646, y: 0.040566586, z: -0.0000000025995788, w: 0.99917686}
+      scale: {x: 1.0000001, y: 1, z: 0.9999995}
+    - name: ankle_r
+      parentName: lowerleg_r
+      position: {x: -0.2421029, y: 0.000000011113034, z: 0.000000001070632}
+      rotation: {x: 0.00000028148168, y: 0.00020304316, z: -4.2463578e-11, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 0.99999994}
+    - name: Naruto_001_Naruto
+      parentName: NarutoShipudden_BonesSetup_DoneWeightPainting(Clone)
+      position: {x: -0.01030922, y: -1.3690716, z: -0.0021415951}
+      rotation: {x: 0.7071068, y: -1.6463614e-10, z: 3.1923143e-17, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
