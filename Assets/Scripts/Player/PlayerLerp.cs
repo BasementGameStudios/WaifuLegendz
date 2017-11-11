@@ -13,13 +13,14 @@ public class PlayerLerp : NetworkBehaviour {
     {
         if(isLocalPlayer) StartCoroutine(UpdatePosition());
     }
-
     private void OnDisable(){
         StopAllCoroutines();
     }
 
     private void Start()
     {
+        playerPrevious = transform.position;
+        playerNext = transform.position;
         if (isLocalPlayer) StartCoroutine(UpdatePosition());
     }
 

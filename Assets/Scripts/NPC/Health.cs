@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
@@ -12,13 +13,17 @@ public class Health : NetworkBehaviour
     public Image fillImg; 
     public Text hpText;
 
-
+    NavMeshAgent playerAgent;
 
     private void Awake()
     {
         currentHealth = maxHealth;
-        if(hpText != null)
-            hpText.text = currentHealth + "/" + maxHealth;
+        if(hpText != null)  hpText.text = currentHealth + "/" + maxHealth;
+    }
+
+    private void Start()
+    {
+        if (GetComponent<NavMeshAgent>() != null) playerAgent = GetComponent<NavMeshAgent>();
     }
 
     void OnChangeHealth(int health)
@@ -93,8 +98,10 @@ public class Health : NetworkBehaviour
 
         if (isLocalPlayer)
         {
-            Transform respawnLocation = GameObject.Find("SpawnLocation1").transform;
-            transform.position = respawnLocation.position;
+            if (GetComponent<Team>().faction == Team.Faction.A)
+                playerAgent.Warp(GameObject.Find("StartLocationA").transform.position);
+            else
+                playerAgent.Warp(GameObject.Find("StartLocationB").transform.position);  
         }
 
     }

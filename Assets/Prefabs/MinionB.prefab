@@ -19,14 +19,15 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4482565068709516}
-  - component: {fileID: 114891008828296456}
   - component: {fileID: 95625423736550516}
-  - component: {fileID: 114543286842704206}
-  - component: {fileID: 114097050309727180}
-  - component: {fileID: 114916882490982582}
-  - component: {fileID: 195143613901366754}
+  - component: {fileID: 114891008828296456}
   - component: {fileID: 136464119290162950}
   - component: {fileID: 54573501954439132}
+  - component: {fileID: 195143613901366754}
+  - component: {fileID: 114916882490982582}
+  - component: {fileID: 114543286842704206}
+  - component: {fileID: 114097050309727180}
+  - component: {fileID: 114401959716060550}
   m_Layer: 0
   m_Name: MinionB
   m_TagString: Minion
@@ -587,8 +588,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1004106878442858}
   m_LocalRotation: {x: -0, y: -0.63635653, z: -0, w: 0.77139515}
-  m_LocalPosition: {x: -148.14406, y: 0.05, z: -9.6823635}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 859.6, y: 0, z: 808.7}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 4659831921703472}
   - {fileID: 4679557063912600}
@@ -818,9 +819,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!95 &95625423736550516
 Animator:
@@ -864,8 +865,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lane: 0
-  aggroRange: 25
-  coll: {fileID: 0}
+  scanAggroRange: 50
+  maxAggroRange: 75
+  autoAttackHand: {fileID: 1226110600944262}
 --- !u!114 &114265952883459344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -898,6 +900,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114401959716060550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1004106878442858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fa5b9fb25399944b527eb1a23b0b11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateRate: 0.5
 --- !u!114 &114543286842704206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1206,11 +1220,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 999
+  m_Speed: 12
+  m_Acceleration: 5000
   avoidancePriority: 50
-  m_AngularSpeed: 999
-  m_StoppingDistance: 1.5
+  m_AngularSpeed: 5000
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class Chat : NetworkBehaviour {
 
-    public Text chatText;
+    Text chatText;
+    InputField inputField, nameInput;
     public Text playerName;
-    public InputField inputField, nameInput;
     public static List<string> messageList = new List<string>();
 
     public int maxChatlogCount = 100;
@@ -26,7 +26,7 @@ public class Chat : NetworkBehaviour {
         {
             enabled = false;
             this.gameObject.name = pName + this.GetComponent<NetworkIdentity>().netId;
-            //playerName.text = pName;
+            playerName.text = pName;
         }
         if (isLocalPlayer)
         {
@@ -48,7 +48,7 @@ public class Chat : NetworkBehaviour {
     void RpcSetPlayerProfile(string name)
     {
         this.pName = name;
-        //playerName.text = pName;
+        playerName.text = pName;
         this.gameObject.name = pName + this.GetComponent<NetworkIdentity>().netId;
     }
 

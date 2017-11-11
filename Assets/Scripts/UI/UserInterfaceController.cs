@@ -6,6 +6,7 @@ public class UserInterfaceController : MonoBehaviour {
     public GameObject chatPanel;
     #region Lobby Interface Elements
     public static CanvasGroup canvasGroup;
+    public static CanvasGroup chatPanelCanvasGroup;
     public static InputField nameInput;
     #endregion
 
@@ -13,7 +14,11 @@ public class UserInterfaceController : MonoBehaviour {
         chatPanel = GameObject.Find("ChatPanel");
         nameInput = GameObject.Find("nameInputField").GetComponent<InputField>();
         nameInput.text = "Megumin";
-        canvasGroup = nameInput.GetComponent<CanvasGroup>();
+        chatPanelCanvasGroup = chatPanel.GetComponent<CanvasGroup>();
+        canvasGroup = GameObject.Find("LobbyPanel").GetComponent<CanvasGroup>();//nameInput.GetComponent<CanvasGroup>();
+
+        chatPanelCanvasGroup.alpha = 0f;
+        chatPanelCanvasGroup.blocksRaycasts = false;
     }
 
     public static void TransitionToGameUI()
@@ -21,7 +26,11 @@ public class UserInterfaceController : MonoBehaviour {
         if (canvasGroup == null) return;
         canvasGroup.alpha = 0f;
         nameInput.enabled = false;
-        canvasGroup.blocksRaycasts = false; 
+        canvasGroup.blocksRaycasts = false;
+
+        chatPanelCanvasGroup.alpha = 1f;
+        chatPanelCanvasGroup.blocksRaycasts = true;
+
     }
 
     public static void TransitionToLobbyUI()
@@ -30,6 +39,9 @@ public class UserInterfaceController : MonoBehaviour {
         canvasGroup.alpha = 1f;
         nameInput.enabled = true;
         canvasGroup.blocksRaycasts = true;
+
+        chatPanelCanvasGroup.alpha = 0f;
+        chatPanelCanvasGroup.blocksRaycasts = false;
     }
 
     bool toggle = true;

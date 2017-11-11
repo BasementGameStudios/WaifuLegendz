@@ -9,7 +9,9 @@ using UnityEngine.Networking;
 public class Minion : NetworkBehaviour {
 
     public Tower.Lane lane = Tower.Lane.Mid;
-    public float aggroRange = 20;
+    public float scanAggroRange = 50.0f;
+    public float maxAggroRange = 75.0f;
+    public GameObject autoAttackHand;
 
     private Animator animator;
     private NavMeshAgent minionNavMeshAgent;
@@ -44,33 +46,35 @@ public class Minion : NetworkBehaviour {
 
         minionNavMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        animator.SetFloat("speed", 0.5f);
 
-
-        //minionNavMeshAgent.destination = destinations[0].position;
         if (isServer)
         {
-            CmdSetDestination(destinations[0].position);
-            StartCoroutine(ScanSurroundings(15f, 1f));
+            minionNavMeshAgent.destination = destinations[0].position;
+            StartCoroutine(ScanSurroundings(scanAggroRange, 1f));
             StartCoroutine(CheckPath());
         }
+        else
+        {
+            autoAttackHand.SetActive(false);
+        }
 
-        animator.SetFloat("speed", 0.5f);
 
     }
 
     [Command]
     void CmdSetDestination(Vector3 destination)
     {
-        print("cmd set destination " + destination);
+        //print("cmd set destination " + destination);
         RpcSetDestination(destination);
     }
 
     [ClientRpc]
     void RpcSetDestination(Vector3 destination)
     {
-        print("rpc set dest " + destination);
         minionNavMeshAgent.destination = destination;
     }
+
 
     IEnumerator CheckPath()
     {
@@ -114,16 +118,19 @@ public class Minion : NetworkBehaviour {
             i = 0;
             while (i < hitColliders.Length)
             {
-                if (hitColliders[i].tag == "Player" || (hitColliders[i].tag == "Minion"  && hitColliders[i].GetComponent<Minion>().team != this.team)
-                    || (hitColliders[i].tag == "Tower" && hitColliders[i].GetComponent<Tower>().team != this.team))
-                {  
-                    if(enemyTransform == null)
+                if (hitColliders[i].GetComponent<Team>() != null && hitColliders[i].GetComponent<Team>().faction != this.team)
+                {
+                    if (hitColliders[i].tag == "Player" 
+                        || hitColliders[i].tag == "Minion"
+                        || hitColliders[i].tag == "Tower")
                     {
-                        isAttacking = true;
-                        enemyTransform = hitColliders[i].transform;
-                        CmdSetDestination(enemyTransform.position);
-                        //minionNavMeshAgent.SetDestination(enemyTransform.position);
-                        StartCoroutine(MinionAttack());
+                        if (enemyTransform == null)
+                        {
+                            isAttacking = true;
+                            enemyTransform = hitColliders[i].transform;
+                            CmdSetDestination(enemyTransform.position); //minionNavMeshAgent.SetDestination(enemyTransform.position);
+                            StartCoroutine(MinionAttack()); 
+                        }
                     }
                 }
                 i++;
@@ -133,11 +140,9 @@ public class Minion : NetworkBehaviour {
     }
 
 
-    public Collider coll;
-
     IEnumerator MinionAttack()
     {
-        coll = GetComponent<Collider>();
+        Collider coll = GetComponent<Collider>();
 
         while (isAttacking)
         {
@@ -153,13 +158,12 @@ public class Minion : NetworkBehaviour {
             Vector3 closestPoint = coll.ClosestPointOnBounds(enemyTransform.position);
             float distance = Vector3.Distance(closestPoint, enemyTransform.position);
 
-            if (Vector3.Distance(transform.position, enemyTransform.position) < aggroRange)
+            if (Vector3.Distance(transform.position, enemyTransform.position) < maxAggroRange)
             {
                 if (distance > 1)
                 {
                     minionNavMeshAgent.isStopped = false;
-                    //minionNavMeshAgent.SetDestination(enemyTransform.position);
-                    CmdSetDestination(enemyTransform.position);
+                    CmdSetDestination(enemyTransform.position); //minionNavMeshAgent.SetDestination(enemyTransform.position);
                 }
                 else
                 {
@@ -169,14 +173,13 @@ public class Minion : NetworkBehaviour {
                 transform.LookAt(enemyTransform.position);
 
 
-                if(distance <= 2f)
+                if(distance <= 5f)
                 {
-                    if (!animator.GetCurrentAnimatorStateInfo(0).IsName("attack")) animator.SetTrigger("attack");
+                    CmdTriggerAttackAnimation(); //if (!animator.GetCurrentAnimatorStateInfo(0).IsName("attack")) animator.SetTrigger("attack");
                 }
             }
             else
-            {
-                
+            { 
                 enemyTransform = null;
                 isAttacking = false;
                 minionNavMeshAgent.isStopped = false;
@@ -184,9 +187,20 @@ public class Minion : NetworkBehaviour {
                 CmdSetDestination(destinations[destCounter].position);
             }
 
-            yield return new WaitForSeconds(0.33f);
+            yield return new WaitForSeconds(0.333f);
         }
     }
 
+    [Command]
+    void CmdTriggerAttackAnimation()
+    {
+        RpcTriggerAttackAnimation();
+    }
+
+    [ClientRpc]
+    void RpcTriggerAttackAnimation()
+    {
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("attack")) animator.SetTrigger("attack");
+    }
 
 }

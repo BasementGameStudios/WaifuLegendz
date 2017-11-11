@@ -39,9 +39,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1225977479853516}
-  m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 219.76, y: 0.28757954, z: -3.54}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: -0.00000003774895, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 121.3, y: 0, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff2638c99cfbb448adb52949fb803ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  faction: 0
+  faction: 1
 --- !u!114 &114813911199437218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,10 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a144a4222cde1743aa1fa58eda88fa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minionPrefab: {fileID: 1306050260623616, guid: 0fe16cab333ad4b4e93721edc13ba5e3,
+  minionPrefab: {fileID: 1502264201759618, guid: dc8479067374dc54bb934a73790801d3,
     type: 2}
   timeBetweenSpawns: 10
-  minionsPerWave: 2
+  minionsPerWave: 6
 --- !u!114 &114898111999288106
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -16,8 +16,17 @@ public class PlayerController : NetworkBehaviour
 
         if (isLocalPlayer)
         {
-            Camera.main.GetComponent<DiabloCam>().setTarget(transform);
+            Camera.main.GetComponent<DiabloCam>().SetTarget(transform);
+            if (GetComponent<Team>().faction == Team.Faction.A)
+            {
+                playerAgent.Warp(GameObject.Find("StartLocationA").transform.position);
+            }
+            else
+            {
+                playerAgent.Warp(GameObject.Find("StartLocationB").transform.position);
+            }
         }
+        
     }
 
 
@@ -31,7 +40,7 @@ public class PlayerController : NetworkBehaviour
         }
 
         
-        if(playerAgent.remainingDistance > 1)
+        if(playerAgent.remainingDistance > 1f)
         {
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Move"))
                 animator.SetFloat("speed", 1f);
