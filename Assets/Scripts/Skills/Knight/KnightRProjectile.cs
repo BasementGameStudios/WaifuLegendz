@@ -10,11 +10,12 @@ public class KnightRProjectile : NetworkBehaviour {
     [SyncVar(hook = "OnChangeDmg")]
     public int damage;
 
+    public uint casterNetId;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag != "Ground") return;
         particleEffect.SetActive(true);
-
         GetComponent<Rigidbody>().isKinematic = true;
 
         if (!isServer) return;
@@ -24,9 +25,8 @@ public class KnightRProjectile : NetworkBehaviour {
         foreach (var col in colls)
         {
             Health target = col.transform.GetComponent<Health>();
-            if (target != null && target.gameObject.layer != LayerMask.NameToLayer("LocalPlayer"))
+            if (target != null  && target.GetComponent<NetworkIdentity>().netId.Value != casterNetId /*&& target.gameObject.layer != LayerMask.NameToLayer("LocalPlayer")*/)
             {
-                print("r projectile dmg: " + damage);
                 target.CmdTakeTrueDamage(damage);
             }
         }

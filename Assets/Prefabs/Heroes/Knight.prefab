@@ -302,6 +302,9 @@ GameObject:
   - component: {fileID: 114113013038280096}
   - component: {fileID: 114442605668580708}
   - component: {fileID: 114479490308509910}
+  - component: {fileID: 114557003214552064}
+  - component: {fileID: 114789399243235066}
+  - component: {fileID: 114474655357779550}
   - component: {fileID: 114161420714558076}
   m_Layer: 0
   m_Name: Knight
@@ -1047,11 +1050,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70ce53183906974a9b1a2a2b2a93267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillKeycode: 114
   HasAnimation: 1
   hasParticleEffect: 0
-  coolDownInSeconds: 3
+  coolDownInSeconds: 10
   manaCost: 50
+  chosenKeyCode: 3
+  currentKeyCode: 0
   ultPrefab: {fileID: 1956155214026984, guid: 0d2f5115b26678140885152294bdf950, type: 2}
   skillRange: 125
 --- !u!114 &114217451148649792
@@ -1217,6 +1221,8 @@ MonoBehaviour:
   fillImg: {fileID: 114428565122498132}
   hpText: {fileID: 114294249723445970}
   damageText: {fileID: 1286628699935360, guid: 24edeac20a600004098aac6bb2240d60, type: 2}
+  damageTextFontSize: 100
+  damageTextColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &114428565122498132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1277,6 +1283,23 @@ MonoBehaviour:
   Range: 15
   manaFillImg: {fileID: 114389823294920084}
   manaText: {fileID: 114248082316523502}
+--- !u!114 &114474655357779550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445166648219248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d145c56ac5066c4188be689d2e57221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasAnimation: 1
+  hasParticleEffect: 1
+  coolDownInSeconds: 15
+  manaCost: 45
+  chosenKeyCode: 2
+  currentKeyCode: 0
 --- !u!114 &114479490308509910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1333,6 +1356,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114557003214552064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445166648219248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d145c56ac5066c4188be689d2e57221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasAnimation: 1
+  hasParticleEffect: 1
+  coolDownInSeconds: 5
+  manaCost: 25
+  chosenKeyCode: 0
+  currentKeyCode: 0
 --- !u!114 &114667626763727194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1344,6 +1384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffbef002229c27d4eac4468b087f3fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HeroName: 
 --- !u!114 &114683605455288538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1369,6 +1410,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffbef002229c27d4eac4468b087f3fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HeroName: Knight
+--- !u!114 &114789399243235066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445166648219248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d145c56ac5066c4188be689d2e57221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasAnimation: 1
+  hasParticleEffect: 1
+  coolDownInSeconds: 10
+  manaCost: 50
+  chosenKeyCode: 1
+  currentKeyCode: 0
 --- !u!114 &114961677592141426
 MonoBehaviour:
   m_ObjectHideFlags: 1

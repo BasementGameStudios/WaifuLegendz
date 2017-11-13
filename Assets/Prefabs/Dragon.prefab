@@ -5964,6 +5964,8 @@ MonoBehaviour:
   fillImg: {fileID: 114873609130771918}
   hpText: {fileID: 114028987750119412}
   damageText: {fileID: 1286628699935360, guid: 24edeac20a600004098aac6bb2240d60, type: 2}
+  damageTextFontSize: 125
+  damageTextColor: {r: 1, g: 0, b: 0.8896551, a: 1}
 --- !u!114 &114755598063613254
 MonoBehaviour:
   m_ObjectHideFlags: 1

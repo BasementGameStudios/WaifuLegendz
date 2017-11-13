@@ -91,13 +91,13 @@ TextMesh:
   m_Anchor: 0
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 100
+  m_FontSize: 75
   m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4278194431
+    rgba: 4281808766
 --- !u!114 &114697024971870698
 MonoBehaviour:
   m_ObjectHideFlags: 1

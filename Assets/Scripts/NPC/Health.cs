@@ -15,12 +15,15 @@ public class Health : NetworkBehaviour
     public Image fillImg; 
     public Text hpText;
 
+
     Image localFillImg;
     Text localHpText;
 
     NavMeshAgent playerAgent;
 
     public GameObject damageText;
+    public int damageTextFontSize = 100;
+    public Color damageTextColor = Color.red;
 
     private void Awake()
     {
@@ -51,8 +54,11 @@ public class Health : NetworkBehaviour
         
         if(isLocalPlayer)
         {
-            localFillImg.fillAmount = (float)health / maxHealth;
-            localHpText.text = health + "/" + maxHealth;
+            if(localFillImg != null)
+            {
+                localFillImg.fillAmount = (float)health / maxHealth;
+                localHpText.text = health + "/" + maxHealth;
+            }
         }
 
         //print("change hp: " + currentHealth + " / " + maxHealth + " divided=" +(float)currentHealth / maxHealth);
@@ -94,6 +100,8 @@ public class Health : NetworkBehaviour
         Vector3 dmgTextSpawnLocation = transform.position;
         dmgTextSpawnLocation.y += 8f;
         GameObject go = Instantiate(damageText, dmgTextSpawnLocation, damageText.transform.rotation);
+        go.GetComponent<TextMesh>().fontSize = damageTextFontSize;
+        go.GetComponent<TextMesh>().color = damageTextColor;
         go.GetComponent<TextMesh>().text = "" + amount;
         Destroy(go, 5f);
 

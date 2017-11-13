@@ -284,18 +284,21 @@ GameObject:
   - component: {fileID: 95779258743123598}
   - component: {fileID: 114134215231426918}
   - component: {fileID: 114265159243038688}
+  - component: {fileID: 54538977971279370}
+  - component: {fileID: 136759829081293650}
   - component: {fileID: 114685704804095062}
   - component: {fileID: 195461289831166166}
-  - component: {fileID: 136759829081293650}
-  - component: {fileID: 54538977971279370}
   - component: {fileID: 114345238531018120}
   - component: {fileID: 114533983291905172}
   - component: {fileID: 114315493611635532}
   - component: {fileID: 114032999960203086}
   - component: {fileID: 114447595930774614}
   - component: {fileID: 114846573604408554}
-  - component: {fileID: 114677797253021954}
   - component: {fileID: 114131138412505842}
+  - component: {fileID: 114677797253021954}
+  - component: {fileID: 114358600603512360}
+  - component: {fileID: 114196990103446936}
+  - component: {fileID: 114669063001689632}
   m_Layer: 0
   m_Name: Naruto
   m_TagString: Player
@@ -915,6 +918,8 @@ MonoBehaviour:
   fillImg: {fileID: 114354716285109044}
   hpText: {fileID: 114017861861290652}
   damageText: {fileID: 1286628699935360, guid: 24edeac20a600004098aac6bb2240d60, type: 2}
+  damageTextFontSize: 100
+  damageTextColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &114033444981330280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1011,6 +1016,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114196990103446936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563556554080678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d145c56ac5066c4188be689d2e57221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasAnimation: 0
+  hasParticleEffect: 0
+  coolDownInSeconds: 7
+  manaCost: 45
+  chosenKeyCode: 2
+  currentKeyCode: 0
 --- !u!114 &114265159243038688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1055,6 +1077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffbef002229c27d4eac4468b087f3fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HeroName: Naruto
 --- !u!114 &114354716285109044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1082,6 +1105,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114358600603512360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563556554080678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d145c56ac5066c4188be689d2e57221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasAnimation: 0
+  hasParticleEffect: 0
+  coolDownInSeconds: 3
+  manaCost: 22
+  chosenKeyCode: 1
+  currentKeyCode: 0
 --- !u!114 &114447595930774614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1166,6 +1206,23 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114669063001689632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563556554080678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d145c56ac5066c4188be689d2e57221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasAnimation: 1
+  hasParticleEffect: 0
+  coolDownInSeconds: 30
+  manaCost: 90
+  chosenKeyCode: 3
+  currentKeyCode: 0
 --- !u!114 &114677797253021954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1177,11 +1234,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d145c56ac5066c4188be689d2e57221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillKeycode: 113
   HasAnimation: 0
   hasParticleEffect: 0
-  coolDownInSeconds: 2
+  coolDownInSeconds: 3
   manaCost: 30
+  chosenKeyCode: 0
+  currentKeyCode: 0
 --- !u!114 &114685704804095062
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 
 public class PlayerController : NetworkBehaviour
 {
+    public string HeroName;
 
     private NavMeshAgent playerAgent;
     private Animator animator;

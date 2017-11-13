@@ -13,6 +13,7 @@ public class MinionSpawn : NetworkBehaviour {
     public override void OnStartServer()
     {
         if (isServer) StartCoroutine(SpawnMinion());
+        //Physics.IgnoreLayerCollision(LayerMask.NameToLayer("Minion"), LayerMask.NameToLayer("Minion"));
     }
 
 

@@ -149,20 +149,28 @@ public class Stats : NetworkBehaviour {
 
         if (isLocalPlayer)
         {
+            if (localManaFill == null) return;
             localManaFill.fillAmount = (float)CurrentMana / Mana;
             localManaText.text = CurrentMana + "/" + Mana;
         }
     }
 
-
     public bool UtilizeMana(int amount)
     {
         if (CurrentMana >= amount)
         {
-            CurrentMana -= amount;
+            //CurrentMana -= amount;
+            CmdUtilizeMana(amount);
             return true;
         }
         return false;
+    }
+
+
+    [Command]
+    void CmdUtilizeMana(int amount)
+    {
+        CurrentMana -= amount;
     }
 
 }
