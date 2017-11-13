@@ -50,7 +50,24 @@ public class Minion : NetworkBehaviour {
 
         if (isServer)
         {
-            minionNavMeshAgent.destination = destinations[0].position;
+
+            if(destinations.Count < 1)
+            {
+                if(finalDestination != null)
+                {
+                    minionNavMeshAgent.destination = finalDestination.position;
+                }
+                else
+                {
+                    NetworkServer.Destroy(gameObject);
+                    return;
+                }
+            }
+            else
+            {
+                minionNavMeshAgent.destination = destinations[0].position;
+            }
+
             StartCoroutine(ScanSurroundings(scanAggroRange, 1f));
             StartCoroutine(CheckPath());
         }

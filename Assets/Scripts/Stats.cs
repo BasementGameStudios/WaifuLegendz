@@ -1,6 +1,7 @@
 ﻿using UnityEngine.Networking;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Health))]
 public class Stats : NetworkBehaviour {
@@ -32,9 +33,10 @@ public class Stats : NetworkBehaviour {
 
     //Utility
     public float CooldownReduction = 0f;
-    public float ManaRegeneration = 1f;
-    public float Mana = 400f;
-    public float CurrentMana = 400f;
+    public int ManaRegeneration = 2;
+    public int Mana = 400;
+    [SyncVar(hook = "OnChangeMana")]
+    public int CurrentMana = 400;
 
 
     //Other
@@ -46,10 +48,24 @@ public class Stats : NetworkBehaviour {
     public float Range = 10f;
 
 
+    public Image manaFillImg;
+    public Text manaText;
+
+    Image localManaFill;
+    Text localManaText;
+
 
     private void Start()
     {
         healthReference = GetComponent<Health>();
+        if (manaText != null) manaText.text = CurrentMana + "/" + Mana;
+        if (isLocalPlayer)
+        {
+            localManaFill = GameObject.Find("LocalMpFillImg").GetComponent<Image>();
+            localManaText = GameObject.Find("LocalMpText").GetComponent<Text>();
+            localManaText.text = CurrentMana + "/" + Mana; 
+        }
+
         StartCoroutine(StatRegenerationPerSecond(1f));
     }
 
@@ -58,7 +74,11 @@ public class Stats : NetworkBehaviour {
         while (true)
         {
 
-            if(CurrentMana < Mana) CurrentMana += ManaRegeneration;
+            if (CurrentMana < Mana)
+            {
+                CurrentMana += ManaRegeneration;
+                if (CurrentMana > Mana) CurrentMana = Mana;
+            }
             if (healthReference.currentHealth <= healthReference.maxHealth)
             {
                 healthReference.currentHealth += (int)HealthRegenerationPerSecond;
@@ -121,7 +141,28 @@ public class Stats : NetworkBehaviour {
         Gold = newGold;
     }
 
+    void OnChangeMana(int newMana)
+    {
+        CurrentMana = newMana;
+        manaFillImg.fillAmount = (float)CurrentMana / Mana;
+        manaText.text = CurrentMana + "/" + Mana;
+
+        if (isLocalPlayer)
+        {
+            localManaFill.fillAmount = (float)CurrentMana / Mana;
+            localManaText.text = CurrentMana + "/" + Mana;
+        }
+    }
 
 
+    public bool UtilizeMana(int amount)
+    {
+        if (CurrentMana >= amount)
+        {
+            CurrentMana -= amount;
+            return true;
+        }
+        return false;
+    }
 
 }

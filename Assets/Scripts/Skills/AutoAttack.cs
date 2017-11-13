@@ -13,6 +13,8 @@ public class AutoAttack : NetworkBehaviour {
     protected float nextTimeToFire = 0f;
     protected bool isAttacking;
 
+    public GameObject damageText;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -38,7 +40,7 @@ public class AutoAttack : NetworkBehaviour {
     [Command]
     protected void CmdDamage(GameObject other, int damage)
     {
-        other.GetComponent<Health>().RpcTakeTrueDamage(damage);
+        other.GetComponent<Health>().CmdTakeTrueDamage(damage);
     }
 
     protected virtual IEnumerator ApplyBasicAttack(GameObject other, int damage)
@@ -59,6 +61,7 @@ public class AutoAttack : NetworkBehaviour {
                     CmdTriggerAttackAnimation();//animator.SetTrigger("attack");
                 }
                 CmdDamage(other, damage);
+
             }
             yield return null;
         }

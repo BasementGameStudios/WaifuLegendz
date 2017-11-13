@@ -5,8 +5,17 @@ using UnityEngine;
 
 public class NetworkCustom : NetworkManager
 {
-    int chosenCharacter = 0;
     public GameObject[] playerPrefabs;
+    public GameObject[] playerPrefabsLobby;
+    public Vector3 offset;
+    private GameObject lobbySelectionModelPrefab;
+    int chosenCharacter = 0;
+
+
+    private void Start()
+    {
+        SelectLobbyPrefab(0);
+    }
 
     //subclass for sending network messages
     public class NetworkMessage : MessageBase
@@ -37,11 +46,11 @@ public class NetworkCustom : NetworkManager
 
     public override void OnClientConnect(NetworkConnection conn)
     {
+        Destroy(lobbySelectionModelPrefab);
         NetworkMessage test = new NetworkMessage();
         test.chosenClass = chosenCharacter;
         ClientScene.AddPlayer(conn, 0, test);
     }
-
 
     public override void OnClientSceneChanged(NetworkConnection conn)
     {
@@ -51,11 +60,20 @@ public class NetworkCustom : NetworkManager
     public void Button1() //naruto atm
     {
         chosenCharacter = 0;
+        SelectLobbyPrefab(0);
     }
 
     public void Button2()
     {
         chosenCharacter = 1;
+        SelectLobbyPrefab(1);
+    }
+
+    void SelectLobbyPrefab(int index)
+    {
+        Destroy(lobbySelectionModelPrefab);
+        lobbySelectionModelPrefab = Instantiate(playerPrefabsLobby[index], Camera.main.transform.position + offset, playerPrefabsLobby[0].transform.rotation);
+        lobbySelectionModelPrefab.transform.LookAt(Camera.main.transform);
     }
 
 }

@@ -9,11 +9,18 @@ public class Health : NetworkBehaviour
     [SyncVar(hook ="OnChangeHealth")]
     public int currentHealth;
 
+    public bool isAttackable = true;
+
     public int maxHealth = 100;
     public Image fillImg; 
     public Text hpText;
 
+    Image localFillImg;
+    Text localHpText;
+
     NavMeshAgent playerAgent;
+
+    public GameObject damageText;
 
     private void Awake()
     {
@@ -24,6 +31,14 @@ public class Health : NetworkBehaviour
     private void Start()
     {
         if (GetComponent<NavMeshAgent>() != null) playerAgent = GetComponent<NavMeshAgent>();
+
+        if (isLocalPlayer)
+        {
+            localHpText = GameObject.Find("LocalHpText").GetComponent<Text>();
+            localFillImg = GameObject.Find("LocalHpFillImg").GetComponent<Image>();
+            localHpText.text = currentHealth + " / " + maxHealth;
+        }
+
     }
 
     void OnChangeHealth(int health)
@@ -33,6 +48,13 @@ public class Health : NetworkBehaviour
         fillImg.fillAmount = (float)health / maxHealth;
         hpText.text = health + "/" + maxHealth;
         
+        
+        if(isLocalPlayer)
+        {
+            localFillImg.fillAmount = (float)health / maxHealth;
+            localHpText.text = health + "/" + maxHealth;
+        }
+
         //print("change hp: " + currentHealth + " / " + maxHealth + " divided=" +(float)currentHealth / maxHealth);
     }
 
@@ -61,12 +83,20 @@ public class Health : NetworkBehaviour
     [Command]
     public void CmdTakeTrueDamage(int amount)
     {
+        if (!isAttackable) return;
         RpcTakeTrueDamage(amount);
     }
 
     [ClientRpc]
     public void RpcTakeTrueDamage(int amount)
     {
+
+        Vector3 dmgTextSpawnLocation = transform.position;
+        dmgTextSpawnLocation.y += 8f;
+        GameObject go = Instantiate(damageText, dmgTextSpawnLocation, damageText.transform.rotation);
+        go.GetComponent<TextMesh>().text = "" + amount;
+        Destroy(go, 5f);
+
         currentHealth -= amount;
         if (currentHealth <= 0)
         {

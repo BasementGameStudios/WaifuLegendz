@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1844404550063972}
   m_LocalRotation: {x: 0.5735764, y: 0, z: 0, w: 0.8191521}
-  m_LocalPosition: {x: 135.04, y: 70, z: 47.32}
+  m_LocalPosition: {x: 135.04, y: 65, z: 47.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1e4d17414498f4984c0bbed6872f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 100
+  scrollSpeed: 125
   scrollSensitivity: 45
   offset: {x: 0, y: 50, z: -17.5}
   minFov: 10

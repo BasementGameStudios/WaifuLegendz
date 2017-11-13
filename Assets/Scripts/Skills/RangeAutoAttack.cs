@@ -27,7 +27,8 @@ public class RangeAutoAttack : AutoAttack {
     void CmdLaunchRangedAutoAttack(GameObject receiver, int damage)
     {
         GameObject projectile = Instantiate(autoAttackProjectilePrefab, handPosition.position, autoAttackProjectilePrefab.transform.rotation);
-        projectile.GetComponent<NaurotoAAProjectile>().SetupProjectile(damage, receiver);
+        Physics.IgnoreCollision(projectile.GetComponent<Collider>(), GetComponent<Collider>());
+        projectile.GetComponent<AutoAttackProjectile>().SetupProjectile(damage, receiver);
         NetworkServer.Spawn(projectile);
         Destroy(projectile, 100f);
     }

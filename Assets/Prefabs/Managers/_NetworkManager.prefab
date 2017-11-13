@@ -88,6 +88,7 @@ MonoBehaviour:
   - {fileID: 1502264201759618, guid: dc8479067374dc54bb934a73790801d3, type: 2}
   - {fileID: 1004106878442858, guid: f3081ed350f94fd438f705fb5ff04d5a, type: 2}
   - {fileID: 1145796691059778, guid: 80388053f168a77479222320b3b011fa, type: 2}
+  - {fileID: 1956155214026984, guid: 0d2f5115b26678140885152294bdf950, type: 2}
   - {fileID: 1101121062721480, guid: caed8465deebbd54191974def1f71b25, type: 2}
   m_CustomConfig: 0
   m_MaxConnections: 4
@@ -147,3 +148,7 @@ MonoBehaviour:
   playerPrefabs:
   - {fileID: 1563556554080678, guid: 37c164050700e2d42b4256d353690447, type: 2}
   - {fileID: 1445166648219248, guid: ec8e66484d842b248af4fd30e74b1516, type: 2}
+  playerPrefabsLobby:
+  - {fileID: 1687048806176932, guid: 2ef3b0776bb8ea94e9e51e027de892fb, type: 2}
+  - {fileID: 1465879694506360, guid: 8c810c67d92e49b41973e748d2270e8e, type: 2}
+  offset: {x: 0, y: -4, z: 1.25}

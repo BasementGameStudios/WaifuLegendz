@@ -23,8 +23,9 @@ GameObject:
   - component: {fileID: 23162083301304332}
   - component: {fileID: 114440852659577794}
   - component: {fileID: 114720875516050404}
-  - component: {fileID: 114707355235304940}
   - component: {fileID: 65513098007110676}
+  - component: {fileID: 95267110253947332}
+  - component: {fileID: 114112983335687136}
   m_Layer: 0
   m_Name: NarutoAutoProjectile
   m_TagString: Untagged
@@ -98,6 +99,38 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.3078792, y: 0.5, z: 2.3078792}
   m_Center: {x: 1.2394081, y: 0.023761755, z: 1.1844047}
+--- !u!95 &95267110253947332
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1101121062721480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114112983335687136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1101121062721480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbd4b24db5dccad4484c6b8ccd16d330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  projectileSpeed: 25
+  receiver: {fileID: 0}
+  damageText: {fileID: 1286628699935360, guid: 24edeac20a600004098aac6bb2240d60, type: 2}
 --- !u!114 &114440852659577794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,20 +163,6 @@ MonoBehaviour:
     i15: 37
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 0
---- !u!114 &114707355235304940
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1101121062721480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 024660ce3463b824190e6f86b89af258, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0
-  projectileSpeed: 15
-  receiver: {fileID: 0}
 --- !u!114 &114720875516050404
 MonoBehaviour:
   m_ObjectHideFlags: 1
