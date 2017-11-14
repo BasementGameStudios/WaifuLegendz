@@ -8,7 +8,6 @@ public class SimpleTextTransform : MonoBehaviour {
     public float SpeedY = 1f;
     public float SpeedZ = 0f;
 	
-	// Update is called once per frame
 	void Update () {
 
         transform.Translate(SpeedX * Time.deltaTime,

@@ -25,6 +25,7 @@ public class Minion : NetworkBehaviour {
 
     Team.Faction team;
 
+
     private void Start()
     {
         team = GetComponent<Team>().faction;
@@ -177,7 +178,7 @@ public class Minion : NetworkBehaviour {
 
             if (Vector3.Distance(transform.position, enemyTransform.position) < maxAggroRange)
             {
-                if (distance > 1)
+                if (distance > 5)
                 {
                     minionNavMeshAgent.isStopped = false;
                     CmdSetDestination(enemyTransform.position); //minionNavMeshAgent.SetDestination(enemyTransform.position);

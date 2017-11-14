@@ -997,7 +997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 95626865174360118}
-  m_ParameterSendBits: 2
+  m_ParameterSendBits: 0
   param0: 
   param1: 
   param2: 
@@ -1053,6 +1053,7 @@ MonoBehaviour:
   HasAnimation: 1
   hasParticleEffect: 0
   coolDownInSeconds: 10
+  animator: {fileID: 0}
   manaCost: 50
   chosenKeyCode: 3
   currentKeyCode: 0
@@ -1262,7 +1263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityPower: 0
-  AttackDamage: 55
+  AttackDamage: 65
   AttackSpeed: 0
   CriticalStrikeChance: 0
   CriticalStrikeMultiplier: 2
@@ -1274,8 +1275,8 @@ MonoBehaviour:
   HealthRegenerationPerSecond: 2
   CooldownReduction: 0
   ManaRegeneration: 2
-  Mana: 500
-  CurrentMana: 450
+  Mana: 550
+  CurrentMana: 550
   Experience: 0
   Gold: 0
   GoldGenerationPerSecond: 1
@@ -1297,6 +1298,7 @@ MonoBehaviour:
   HasAnimation: 1
   hasParticleEffect: 1
   coolDownInSeconds: 15
+  animator: {fileID: 0}
   manaCost: 45
   chosenKeyCode: 2
   currentKeyCode: 0
@@ -1370,6 +1372,7 @@ MonoBehaviour:
   HasAnimation: 1
   hasParticleEffect: 1
   coolDownInSeconds: 5
+  animator: {fileID: 0}
   manaCost: 25
   chosenKeyCode: 0
   currentKeyCode: 0
@@ -1425,6 +1428,7 @@ MonoBehaviour:
   HasAnimation: 1
   hasParticleEffect: 1
   coolDownInSeconds: 10
+  animator: {fileID: 0}
   manaCost: 50
   chosenKeyCode: 1
   currentKeyCode: 0

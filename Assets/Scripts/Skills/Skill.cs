@@ -20,8 +20,7 @@ public class Skill : NetworkBehaviour {
 
     protected bool isCasting;
 
-    protected Animator animator;
-    protected int damage;
+    public Animator animator;
 
     public int manaCost = 30;
 
@@ -117,8 +116,6 @@ public class Skill : NetworkBehaviour {
         if (!isCasting)
         {
             isCasting = true;
-
-            damage = (int)GetComponent<Stats>().AttackDamage;
 
             if (GetComponent<Stats>().UtilizeMana(manaCost) && SkillEffect())
             {

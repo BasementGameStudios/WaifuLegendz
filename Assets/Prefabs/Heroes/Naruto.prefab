@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 114447595930774614}
   - component: {fileID: 114846573604408554}
   - component: {fileID: 114131138412505842}
-  - component: {fileID: 114677797253021954}
+  - component: {fileID: 114979638092025794}
   - component: {fileID: 114358600603512360}
   - component: {fileID: 114196990103446936}
   - component: {fileID: 114669063001689632}
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314ac10175eecae4192508d22909bf54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 1
+  attackSpeed: 2
   damageText: {fileID: 1286628699935360, guid: 24edeac20a600004098aac6bb2240d60, type: 2}
   autoAttackProjectilePrefab: {fileID: 1101121062721480, guid: caed8465deebbd54191974def1f71b25,
     type: 2}
@@ -1030,7 +1030,8 @@ MonoBehaviour:
   HasAnimation: 0
   hasParticleEffect: 0
   coolDownInSeconds: 7
-  manaCost: 45
+  animator: {fileID: 0}
+  manaCost: 25
   chosenKeyCode: 2
   currentKeyCode: 0
 --- !u!114 &114265159243038688
@@ -1045,7 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Animator: {fileID: 95779258743123598}
-  m_ParameterSendBits: 2
+  m_ParameterSendBits: 1
   param0: 
   param1: 
   param2: 
@@ -1119,7 +1120,8 @@ MonoBehaviour:
   HasAnimation: 0
   hasParticleEffect: 0
   coolDownInSeconds: 3
-  manaCost: 22
+  animator: {fileID: 0}
+  manaCost: 25
   chosenKeyCode: 1
   currentKeyCode: 0
 --- !u!114 &114447595930774614
@@ -1219,26 +1221,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasAnimation: 1
   hasParticleEffect: 0
-  coolDownInSeconds: 30
+  coolDownInSeconds: 25
+  animator: {fileID: 0}
   manaCost: 90
   chosenKeyCode: 3
-  currentKeyCode: 0
---- !u!114 &114677797253021954
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1563556554080678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d145c56ac5066c4188be689d2e57221, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HasAnimation: 0
-  hasParticleEffect: 0
-  coolDownInSeconds: 3
-  manaCost: 30
-  chosenKeyCode: 0
   currentKeyCode: 0
 --- !u!114 &114685704804095062
 MonoBehaviour:
@@ -1291,7 +1277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityPower: 0
-  AttackDamage: 40
+  AttackDamage: 50
   AttackSpeed: 0
   CriticalStrikeChance: 0
   CriticalStrikeMultiplier: 2
@@ -1304,7 +1290,7 @@ MonoBehaviour:
   CooldownReduction: 0
   ManaRegeneration: 3
   Mana: 666
-  CurrentMana: 500
+  CurrentMana: 666
   Experience: 0
   Gold: 0
   GoldGenerationPerSecond: 1
@@ -1345,6 +1331,28 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Faker
+--- !u!114 &114979638092025794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563556554080678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be650206c5d16f41b19d85b423fc9f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasAnimation: 1
+  hasParticleEffect: 1
+  coolDownInSeconds: 3
+  animator: {fileID: 0}
+  manaCost: 30
+  chosenKeyCode: 0
+  currentKeyCode: 0
+  shurikenPrefab: {fileID: 1077077993667318, guid: 6e554daa9ae96154ab748dae5810dc55,
+    type: 2}
+  missleSpeed: 30
+  shurikenAliveTime: 5
 --- !u!114 &114991264762157234
 MonoBehaviour:
   m_ObjectHideFlags: 1

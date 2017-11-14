@@ -9,6 +9,7 @@ TagManager:
   - Minion
   - Dragon
   - Ground
+  - Projectile
   layers:
   - Default
   - TransparentFX
