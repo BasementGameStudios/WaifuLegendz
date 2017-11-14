@@ -9,7 +9,7 @@ public class NetworkCustom : NetworkManager
     public GameObject[] playerPrefabsLobby;
     public Vector3 offset;
     private GameObject lobbySelectionModelPrefab;
-    int chosenCharacter = 0;
+    int chosenCharacter = 2;
 
 
     private void Start()
@@ -42,6 +42,13 @@ public class NetworkCustom : NetworkManager
             GameObject player = Instantiate(playerPrefabs[1]);
             NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
         }
+
+        if (selectedClass == 2)
+        {
+            //GameObject player = Instantiate(Resources.Load("Characters/B", typeof(GameObject))) as GameObject;
+            GameObject player = Instantiate(playerPrefabs[2]);
+            NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
+        }
     }
 
     public override void OnClientConnect(NetworkConnection conn)
@@ -67,6 +74,12 @@ public class NetworkCustom : NetworkManager
     {
         chosenCharacter = 1;
         SelectLobbyPrefab(1);
+    }
+
+    public void Button3()
+    {
+        chosenCharacter = 2;
+        SelectLobbyPrefab(2);
     }
 
     void SelectLobbyPrefab(int index)
