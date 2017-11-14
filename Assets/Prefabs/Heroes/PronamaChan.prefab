@@ -5882,8 +5882,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1916439556683890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 160.97011, y: 7.1054274e-15, z: 36.064198}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 111.72942, y: 0, z: 67.68744}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children:
   - {fileID: 4166772400119114}
   - {fileID: 4770104599839366}
@@ -8528,7 +8528,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 9b5af5babfc9e8e4e912c8869f043bfb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -8544,7 +8544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cabf595e7bb62049bd7deeda069e291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AbilityPower: 0
+  AbilityPower: 125
   AttackDamage: 125
   AttackSpeed: 0
   CriticalStrikeChance: 0
@@ -8556,9 +8556,9 @@ MonoBehaviour:
   MagicResistance: 0
   HealthRegenerationPerSecond: 5
   CooldownReduction: 0
-  ManaRegeneration: 3
-  Mana: 400
-  CurrentMana: 400
+  ManaRegeneration: 25
+  Mana: 12500
+  CurrentMana: 12500
   Experience: 0
   Gold: 0
   GoldGenerationPerSecond: 1
@@ -9488,6 +9488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HeroName: PronamaChan
+  head: {fileID: 4462774066238400}
 --- !u!114 &114406021022393306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -11911,7 +11912,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1128369821729082}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7410002, z: 0}
+  m_LocalPosition: {x: 0, y: 2.2410002, z: 0}
   m_LocalScale: {x: 0.005, y: 0.005, z: 1}
   m_Children:
   - {fileID: 224025952271276072}
@@ -11926,7 +11927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.741}
+  m_AnchoredPosition: {x: 0, y: 2.241}
   m_SizeDelta: {x: 250, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224383469969319004

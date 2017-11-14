@@ -10,6 +10,8 @@ public class PlayerController : NetworkBehaviour
     private NavMeshAgent playerAgent;
     private Animator animator;
 
+    public Transform head;
+
     private void Start()
     {
         playerAgent = GetComponent<NavMeshAgent>();
@@ -49,9 +51,20 @@ public class PlayerController : NetworkBehaviour
         else
         {
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
-                animator.SetFloat("speed", 0f);
+            {
+                animator.SetFloat("speed", 0f);                
+            }
         }
 
+    }
+
+    private void LateUpdate()
+    {
+        if (head != null && playerAgent.remainingDistance < 1f)
+        {
+            print(head.rotation);
+            head.LookAt(Camera.main.transform);
+        }
     }
 
     void GetInteraction()
