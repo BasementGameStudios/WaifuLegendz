@@ -914,7 +914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   isAttackable: 1
-  maxHealth: 1250
+  maxHealth: 1950
   fillImg: {fileID: 114354716285109044}
   hpText: {fileID: 114017861861290652}
   damageText: {fileID: 1286628699935360, guid: 24edeac20a600004098aac6bb2240d60, type: 2}
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityPower: 0
-  AttackDamage: 50
+  AttackDamage: 60
   AttackSpeed: 0
   CriticalStrikeChance: 0
   CriticalStrikeMultiplier: 2
@@ -1286,9 +1286,9 @@ MonoBehaviour:
   LifeSteal: 0
   Armor: 0
   MagicResistance: 0
-  HealthRegenerationPerSecond: 3
+  HealthRegenerationPerSecond: 10
   CooldownReduction: 0
-  ManaRegeneration: 3
+  ManaRegeneration: 15
   Mana: 666
   CurrentMana: 666
   Experience: 0
@@ -1353,6 +1353,7 @@ MonoBehaviour:
     type: 2}
   missleSpeed: 30
   shurikenAliveTime: 5
+  numberOfShurikens: 5
 --- !u!114 &114991264762157234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1469,7 +1470,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 40
+  m_Speed: 123
   m_Acceleration: 5555
   avoidancePriority: 50
   m_AngularSpeed: 5555

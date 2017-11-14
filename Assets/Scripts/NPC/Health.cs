@@ -129,7 +129,8 @@ public class Health : NetworkBehaviour
             print(gameObject.name + " died");
         }
 
-        if(gameObject.tag == "Minion" || gameObject.tag == "Tower")
+        if(gameObject.tag == "Minion" || gameObject.tag == "Tower"
+            || gameObject.tag == "Dragon")
         {
             NetworkServer.Destroy(gameObject);
         }

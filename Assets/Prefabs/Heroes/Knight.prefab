@@ -1052,13 +1052,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasAnimation: 1
   hasParticleEffect: 0
-  coolDownInSeconds: 10
+  coolDownInSeconds: 1
   animator: {fileID: 0}
   manaCost: 50
   chosenKeyCode: 3
   currentKeyCode: 0
   ultPrefab: {fileID: 1956155214026984, guid: 0d2f5115b26678140885152294bdf950, type: 2}
-  skillRange: 125
+  skillRange: 250
 --- !u!114 &114217451148649792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   isAttackable: 1
-  maxHealth: 550
+  maxHealth: 4250
   fillImg: {fileID: 114428565122498132}
   hpText: {fileID: 114294249723445970}
   damageText: {fileID: 1286628699935360, guid: 24edeac20a600004098aac6bb2240d60, type: 2}
@@ -1263,7 +1263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityPower: 0
-  AttackDamage: 65
+  AttackDamage: 100
   AttackSpeed: 0
   CriticalStrikeChance: 0
   CriticalStrikeMultiplier: 2
@@ -1272,11 +1272,11 @@ MonoBehaviour:
   LifeSteal: 0
   Armor: 0
   MagicResistance: 0
-  HealthRegenerationPerSecond: 2
+  HealthRegenerationPerSecond: 15
   CooldownReduction: 0
-  ManaRegeneration: 2
-  Mana: 550
-  CurrentMana: 550
+  ManaRegeneration: 25
+  Mana: 1000
+  CurrentMana: 999
   Experience: 0
   Gold: 0
   GoldGenerationPerSecond: 1
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b07c37e0afeb86429cd3e0cf4e8de44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 1
+  attackSpeed: 2
   damageText: {fileID: 1286628699935360, guid: 24edeac20a600004098aac6bb2240d60, type: 2}
 --- !u!114 &114481182168623628
 MonoBehaviour:
@@ -1590,7 +1590,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 60
+  m_Speed: 35
   m_Acceleration: 5000
   avoidancePriority: 50
   m_AngularSpeed: 5000

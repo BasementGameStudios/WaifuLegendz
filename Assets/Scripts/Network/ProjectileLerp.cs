@@ -15,7 +15,10 @@ public class ProjectileLerp : NetworkBehaviour {
         previousPosition = transform.position;
         nextPosition = transform.position;
 
-        if (isServer) StartCoroutine(UpdatePosition());
+        if (isServer)
+        {
+            StartCoroutine(UpdatePosition());
+        }
 
     }
 

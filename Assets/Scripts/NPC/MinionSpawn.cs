@@ -41,7 +41,6 @@ public class MinionSpawn : NetworkBehaviour {
                 GameObject minionInstance = Instantiate(minionPrefab, sourcePosition, minionPrefab.transform.rotation);
                 minionInstance.name = minionInstance.name + id++;
                 NetworkServer.Spawn(minionInstance);
-                print("f1");
             }
         }
 
@@ -70,7 +69,7 @@ public class MinionSpawn : NetworkBehaviour {
                 GameObject minionInstance = Instantiate(minionPrefab, transform.position, minionPrefab.transform.rotation); 
                 minionInstance.name = minionInstance.name + id++;
                 NetworkServer.Spawn(minionInstance);
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(0.5f);
             }
 
             yield return new WaitForSeconds(timeBetweenSpawns);

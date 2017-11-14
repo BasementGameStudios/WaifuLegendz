@@ -75,13 +75,14 @@ GameObject:
   - component: {fileID: 33454741787007396}
   - component: {fileID: 23735350168680236}
   - component: {fileID: 95937764445514186}
-  - component: {fileID: 65780710553685836}
   - component: {fileID: 114759176762200058}
   - component: {fileID: 114780131294874268}
   - component: {fileID: 114872194854994520}
   - component: {fileID: 114716103856496602}
   - component: {fileID: 114571386461314944}
   - component: {fileID: 54202545590948040}
+  - component: {fileID: 114864390787320918}
+  - component: {fileID: 65404066576725806}
   m_Layer: 0
   m_Name: TowerTeamA
   m_TagString: Tower
@@ -123,6 +124,34 @@ GameObject:
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1834403789839664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4824977112729382}
+  m_Layer: 0
+  m_Name: TowerSpawnLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4824977112729382
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1834403789839664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.162, y: 2.58, z: 1.249}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4911507061184374}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4911507061184374
 Transform:
   m_ObjectHideFlags: 1
@@ -130,10 +159,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1650332433722488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 461.93112, y: 0.04945393, z: 407.8129}
+  m_LocalPosition: {x: -180.6, y: 0, z: 498.4}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_Children:
   - {fileID: 224402757528833572}
+  - {fileID: 4824977112729382}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -193,7 +223,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &65780710553685836
+--- !u!65 &65404066576725806
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -203,8 +233,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.16, y: 4.8, z: 3.16}
-  m_Center: {x: 0, y: 2.3, z: 0}
+  m_Size: {x: 4, y: 4.761695, z: 4}
+  m_Center: {x: 0.31, y: 2.19, z: 0.14}
 --- !u!95 &95937764445514186
 Animator:
   serializedVersion: 3
@@ -338,11 +368,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  isAttackable: 0
+  isAttackable: 1
   maxHealth: 1250
   fillImg: {fileID: 114997554912076648}
   hpText: {fileID: 114289449751051646}
   damageText: {fileID: 1286628699935360, guid: 24edeac20a600004098aac6bb2240d60, type: 2}
+  damageTextFontSize: 100
+  damageTextColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &114612453382202254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,6 +449,21 @@ MonoBehaviour:
   lane: 0
   team: 0
   nextStructure: {fileID: 0}
+--- !u!114 &114864390787320918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1650332433722488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13864191bb6204c4cbc7eb16d7e0cb39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpawnLocation: {fileID: 4824977112729382}
+  towerProjectile: {fileID: 1610127659903264, guid: d4785dcf91f220c4d84b20f39f41f000,
+    type: 2}
+  currentTarget: {fileID: 0}
 --- !u!114 &114872194854994520
 MonoBehaviour:
   m_ObjectHideFlags: 1

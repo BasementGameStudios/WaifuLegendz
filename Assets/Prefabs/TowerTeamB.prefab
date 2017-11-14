@@ -132,6 +132,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1412304135247080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4199963049344530}
+  m_Layer: 0
+  m_Name: ProjSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1428057735218970
 GameObject:
   m_ObjectHideFlags: 1
@@ -163,6 +178,7 @@ GameObject:
   - component: {fileID: 114281700908741500}
   - component: {fileID: 65208361054899352}
   - component: {fileID: 54208235611690930}
+  - component: {fileID: 114886204523426926}
   m_Layer: 0
   m_Name: TowerTeamB
   m_TagString: Tower
@@ -306,6 +322,19 @@ Transform:
   m_Father: {fileID: 4221081671595226}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4199963049344530
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1412304135247080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.048, z: -0.76}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4230671684943484}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4221081671595226
 Transform:
   m_ObjectHideFlags: 1
@@ -332,11 +361,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1461164138633994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -585.9, y: 0.07010455, z: 410.6}
-  m_LocalScale: {x: 6.000034, y: 6, z: 6.000034}
+  m_LocalPosition: {x: -297.33, y: 0.07010455, z: 672.66}
+  m_LocalScale: {x: 6, y: 6, z: 6.000034}
   m_Children:
   - {fileID: 4221081671595226}
   - {fileID: 224901681758174898}
+  - {fileID: 4199963049344530}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -694,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd82dc322131714d96ca320f633395a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lane: 2
+  lane: 0
   team: 1
   nextStructure: {fileID: 0}
 --- !u!114 &114268905826943926
@@ -847,6 +877,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: HP
+--- !u!114 &114886204523426926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1461164138633994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13864191bb6204c4cbc7eb16d7e0cb39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpawnLocation: {fileID: 4199963049344530}
+  towerProjectile: {fileID: 1610127659903264, guid: d4785dcf91f220c4d84b20f39f41f000,
+    type: 2}
+  currentTarget: {fileID: 0}
 --- !u!114 &114887736139136066
 MonoBehaviour:
   m_ObjectHideFlags: 1

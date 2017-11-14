@@ -8,6 +8,8 @@ public class NarutoQ : Skill {
     public float missleSpeed = 25.0f;
     public float shurikenAliveTime = 5.0f;
 
+    public int numberOfShurikens = 5;
+
     protected override void SkillAnimation()
     {
         CmdTriggerAttackAnimation("attack");
@@ -29,7 +31,7 @@ public class NarutoQ : Skill {
     [Command]
     void CmdSpawnShuriken(Vector3 position)
     {
-        StartCoroutine(SpawnShuriken(5, position));
+        StartCoroutine(SpawnShuriken(numberOfShurikens, position));
     }
 
     IEnumerator SpawnShuriken(int numOfShurikens, Vector3 position)
@@ -61,7 +63,7 @@ public class NarutoQ : Skill {
             i++;
             yield return new WaitForSeconds(0.05f);
         }
-
+        
     }
 
 }

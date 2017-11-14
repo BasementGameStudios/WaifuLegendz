@@ -40,7 +40,7 @@ public class KnightR : Skill {
     {
         spawnSwordPosition.y += 150f;
         GameObject sword = Instantiate(ultPrefab, spawnSwordPosition, ultPrefab.transform.rotation);
-        sword.GetComponent<KnightRProjectile>().damage = (int)(GetComponent<Stats>().AttackDamage * 3);
+        sword.GetComponent<KnightRProjectile>().damage = (int)(GetComponent<Stats>().AttackDamage * 20);
         sword.GetComponent<KnightRProjectile>().casterNetId = GetComponent<NetworkIdentity>().netId.Value;
 
         NetworkServer.Spawn(sword);
